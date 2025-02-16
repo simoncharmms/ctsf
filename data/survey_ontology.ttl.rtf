@@ -1,0 +1,568 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20560\viewh9960\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+@prefix : <https://w3id.org/survey-ontology#> .\
+@prefix owl: <http://www.w3.org/2002/07/owl#> .\
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .\
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\
+@base <https://w3id.org/survey-ontology#> .\
+\
+<https://w3id.org/survey-ontology#> rdf:type owl:Ontology ;\
+                                     <http://purl.org/dc/elements/1.1/contributor> "Work on the Survey Ontology and Coney (https://survey.actionproject.eu/coney/) was partially supported by the ACTION project (grant agreement number 824603), co-funded by the European Commission under the Horizon 2020 Framework Programme."@en ;\
+                                     <http://purl.org/dc/elements/1.1/creator> \'93Simon \'93Schramm @en ,;\
+                                     <http://purl.org/dc/elements/1.1/rights> "The Survey Ontology is available under the Creative Commons Attribution 4.0 license; see http://creativecommons.org/licenses/by/4.0/. In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work). Proper Attribution: Simply include the statement \\"This work is based on the Survey Ontology, developed by the Knowledge Technologies group at Cefriel, Milan\\" and link back to https://w3id.org/survey-ontology."@en ;\
+                                     <http://purl.org/dc/elements/1.1/subject> "Survey, Question, Answer, Variable"@en ;\
+                                     <http://purl.org/dc/elements/1.1/title> "The Survey Ontology"@en ;\
+                                     <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;\
+                                     <http://purl.org/vocab/vann/preferredNamespacePrefix> "sur" ;\
+                                     <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/survey-ontology#" ;\
+                                     rdfs:comment "Ontology for surveys based on the Coney data model."@en ;\
+                                     rdfs:label "Survey Ontology"@en ;\
+                                     owl:versionInfo "V 1.1, Release 2021"@en ;\
+                                     <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/survey-ontology> .\
+\
+#################################################################\
+#    Annotation properties\
+#################################################################\
+\
+###  http://purl.org/dc/elements/1.1/contributor\
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/dc/elements/1.1/creator\
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/dc/elements/1.1/rights\
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/dc/elements/1.1/subject\
+<http://purl.org/dc/elements/1.1/subject> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/dc/elements/1.1/title\
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/dc/terms/license\
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/vocab/vann/preferredNamespacePrefix\
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/vocab/vann/preferredNamespaceUri\
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://purl.org/vocab/vann/usageNote\
+<http://purl.org/vocab/vann/usageNote> rdf:type owl:AnnotationProperty .\
+\
+\
+###  http://xmlns.com/foaf/0.1/homepage\
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .\
+\
+\
+#################################################################\
+#    Object Properties\
+#################################################################\
+\
+###  http://purl.org/linked-data/cube#dataSet\
+<http://purl.org/linked-data/cube#dataSet> rdf:type owl:ObjectProperty ;\
+                                           <http://purl.org/vocab/vann/usageNote> "Property linking a completed question to a survey dataset." .\
+\
+\
+###  http://purl.org/linked-data/cube#observation\
+<http://purl.org/linked-data/cube#observation> rdf:type owl:ObjectProperty ;\
+                                               <http://purl.org/vocab/vann/usageNote> "Property linking a completed survey with the completed questions defined in the survey completion task by the participant." .\
+\
+\
+###  http://purl.org/wf4ever/wfprov#describedByParameter\
+<http://purl.org/wf4ever/wfprov#describedByParameter> rdf:type owl:ObjectProperty ;\
+                                                      <http://purl.org/vocab/vann/usageNote> "Property linking a completed survey to the completed questions composing it." .\
+\
+\
+###  http://purl.org/wf4ever/wfprov#wasOutputFrom\
+<http://purl.org/wf4ever/wfprov#wasOutputFrom> rdf:type owl:ObjectProperty ;\
+                                               <http://purl.org/vocab/vann/usageNote> "Property linking a completed survey to the survey completion task generating it." .\
+\
+\
+###  http://www.openarchives.org/ore/terms/aggregates\
+<http://www.openarchives.org/ore/terms/aggregates> rdf:type owl:ObjectProperty ;\
+                                                   <http://purl.org/vocab/vann/usageNote> "Property linking a survey research object to the resources composing it (e.g. survey dataset, survey procedure, etc.)" .\
+\
+\
+###  http://www.w3.org/ns/prov#wasAssociatedWith\
+<http://www.w3.org/ns/prov#wasAssociatedWith> rdf:type owl:ObjectProperty ;\
+                                              <http://purl.org/vocab/vann/usageNote> "Property linking a survey completion task to the participant performing it." .\
+\
+\
+###  http://www.w3.org/ns/prov#wasAttributedTo\
+<http://www.w3.org/ns/prov#wasAttributedTo> rdf:type owl:ObjectProperty ;\
+                                            <http://purl.org/vocab/vann/usageNote> "Property linking a completed survey and/or a completed question to the participant performing the survey completion task." .\
+\
+\
+###  https://w3id.org/survey-ontology#answeredIn\
+:answeredIn rdf:type owl:ObjectProperty ;\
+            rdfs:domain :CompletedQuestion ;\
+            rdfs:range :SurveyCompletionTask ;\
+            rdfs:comment "Property defining for a completed question the survey completion task, performed by a survey participant, collecting this output." ;\
+            rdfs:label "answered in" .\
+\
+\
+###  https://w3id.org/survey-ontology#completedFor\
+:completedFor rdf:type owl:ObjectProperty ;\
+              rdfs:domain :SurveyCompletionTask ;\
+              rdfs:range :SurveyTarget ;\
+              rdfs:comment "Property associating a survey completion to the survey target for that completion." ;\
+              rdfs:label "completed for" .\
+\
+\
+###  https://w3id.org/survey-ontology#completesQuestion\
+:completesQuestion rdf:type owl:ObjectProperty ;\
+                   rdfs:domain :CompletedQuestion ;\
+                   rdfs:range :Question ;\
+                   rdfs:comment "Property linking a completed question to the question element of the survey that is answered by the participant." ;\
+                   rdfs:label "completes question" .\
+\
+\
+###  https://w3id.org/survey-ontology#describedByProcess\
+:describedByProcess rdf:type owl:ObjectProperty ;\
+                    <http://purl.org/vocab/vann/usageNote> "Property linking a survey completion task to the survey procedure describing it." .\
+\
+\
+###  https://w3id.org/survey-ontology#hasAnswer\
+:hasAnswer rdf:type owl:ObjectProperty ;\
+           rdfs:domain :CompletedQuestion ;\
+           rdfs:range :Answer ;\
+           rdfs:comment "Property linking a completed question to the answer element of the survey that is selected by the participant." ;\
+           rdfs:label "has answer" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasLatentVariable\
+:hasLatentVariable rdf:type owl:ObjectProperty ;\
+                   rdfs:domain :Question ;\
+                   rdfs:range :LatentVariable ;\
+                   rdfs:comment "Property linking a survey question to the latent variable measured by the question." ;\
+                   rdfs:label "has latent variable" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasObservableVariable\
+:hasObservableVariable rdf:type owl:ObjectProperty ;\
+                       rdfs:domain :Question ;\
+                       rdfs:range :ObservableVariable ;\
+                       rdfs:comment "Property linking a survey question to the observable variable measured by the question." ;\
+                       rdfs:label "has observable variable" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasVisualization\
+:hasVisualization rdf:type owl:ObjectProperty ;\
+                  rdfs:domain :MultipleChoiceQuestion ;\
+                  rdfs:range :QuestionVisualization ;\
+                  rdfs:comment "Property linking a survey question to the visualisation expected for the question." ;\
+                  rdfs:label "has visualization" .\
+\
+\
+###  https://w3id.org/survey-ontology#inSurveyProcedure\
+:inSurveyProcedure rdf:type owl:ObjectProperty ;\
+                   rdfs:domain :SurveyElement ;\
+                   rdfs:range :SurveyProcedure ;\
+                   rdfs:comment "Property linking a survey element to the survey procedure it belongs to." ;\
+                   rdfs:label "in survey procedure" .\
+\
+\
+###  https://w3id.org/survey-ontology#leadsTo\
+:leadsTo rdf:type owl:ObjectProperty ;\
+         rdfs:domain :SurveyElement ;\
+         rdfs:range :SurveyElement ;\
+         rdfs:comment "Property describing the flow between different survey elements." ;\
+         rdfs:label "leads to" .\
+\
+\
+###  https://w3id.org/survey-ontology#startsWith\
+:startsWith rdf:type owl:ObjectProperty ;\
+            rdfs:domain :SurveyProcedure ;\
+            rdfs:range :SurveyElement ;\
+            rdfs:comment "Property identifying the first survey element for a survey procedure." ;\
+            rdfs:label "starts with" .\
+\
+\
+#################################################################\
+#    Data properties\
+#################################################################\
+\
+###  http://www.w3.org/ns/prov#endedAtTime\
+<http://www.w3.org/ns/prov#endedAtTime> rdf:type owl:DatatypeProperty ;\
+                                        <http://purl.org/vocab/vann/usageNote> "Timestamp at which a survey completion task is ended." .\
+\
+\
+###  http://www.w3.org/ns/prov#startedAtTime\
+<http://www.w3.org/ns/prov#startedAtTime> rdf:type owl:DatatypeProperty ;\
+                                          <http://purl.org/vocab/vann/usageNote> "Timestamp at which a survey completion task is started." .\
+\
+\
+###  https://w3id.org/survey-ontology#hasAnswerText\
+:hasAnswerText rdf:type owl:DatatypeProperty ;\
+               rdfs:domain :CompletedQuestion ;\
+               rdfs:range xsd:string ;\
+               rdfs:comment "Property linking a completed question to the textual answer provided by the user." ;\
+               rdfs:label "has answer text" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasCompletionTimestamp\
+:hasCompletionTimestamp rdf:type owl:DatatypeProperty ;\
+                        rdfs:domain :CompletedQuestion ;\
+                        rdfs:range xsd:dateTime ;\
+                        rdfs:comment "Timestamp at which a survey question is completed by the participant." ;\
+                        rdfs:label "has completion timestamp" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasLink\
+:hasLink rdf:type owl:DatatypeProperty ;\
+         rdfs:domain :Talk ;\
+         rdfs:range xsd:anyURI ;\
+         rdfs:comment "Link associated to a talk survey element." ;\
+         rdfs:label "has link" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasOrderNumber\
+:hasOrderNumber rdf:type owl:DatatypeProperty ;\
+                rdfs:domain :ClosedAnswer ;\
+                rdfs:range xsd:integer ;\
+                rdfs:comment "Order for a closed answer among the available answers for a question." ;\
+                rdfs:label "has order number" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasPoints\
+:hasPoints rdf:type owl:DatatypeProperty ;\
+           rdfs:domain :ClosedAnswer ;\
+           rdfs:range xsd:float ;\
+           rdfs:comment "Points associated to an answer." ;\
+           rdfs:label "has points" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasStatus\
+:hasStatus rdf:type owl:DatatypeProperty ;\
+           rdfs:domain :SurveyProcedure ;\
+           rdfs:range xsd:string ;\
+           rdfs:comment "Status of a survey procedure." ;\
+           rdfs:label "has status" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasText\
+:hasText rdf:type owl:DatatypeProperty ;\
+         rdfs:domain :SurveyElement ;\
+         rdfs:range xsd:string ;\
+         rdfs:comment "Textual description for a survey element." ;\
+         rdfs:label "has text" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasTitle\
+:hasTitle rdf:type owl:DatatypeProperty ;\
+          rdfs:domain :SurveyProcedure ;\
+          rdfs:range xsd:string ;\
+          rdfs:comment "Title for a survey procedure." ;\
+          rdfs:label "has title" .\
+\
+\
+###  https://w3id.org/survey-ontology#hasValue\
+:hasValue rdf:type owl:DatatypeProperty ;\
+          rdfs:domain :ClosedAnswer ;\
+          rdfs:range xsd:float ;\
+          rdfs:comment "Value for a survey answer." ;\
+          rdfs:label "has value" .\
+\
+\
+###  https://w3id.org/survey-ontology#participantId\
+:participantId rdf:type owl:DatatypeProperty ;\
+               rdfs:domain :Participant ;\
+               rdfs:range xsd:string ;\
+               rdfs:comment "Identifier for a participant." ;\
+               rdfs:label "participant id" .\
+\
+\
+###  https://w3id.org/survey-ontology#sessionId\
+:sessionId rdf:type owl:DatatypeProperty ;\
+           rdfs:domain :SurveyCompletionTask ;\
+           rdfs:range xsd:string ;\
+           rdfs:comment "Identifier for a survey completion task." ;\
+           rdfs:label "session id" .\
+\
+\
+#################################################################\
+#    Classes\
+#################################################################\
+\
+###  http://purl.org/linked-data/cube#DataSet\
+<http://purl.org/linked-data/cube#DataSet> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/linked-data/cube#Observation\
+<http://purl.org/linked-data/cube#Observation> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/linked-data/cube#Slice\
+<http://purl.org/linked-data/cube#Slice> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/wf4ever/ro#ResearchObject\
+<http://purl.org/wf4ever/ro#ResearchObject> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/wf4ever/ro#Resource\
+<http://purl.org/wf4ever/ro#Resource> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/wf4ever/wfdesc#Output\
+<http://purl.org/wf4ever/wfdesc#Output> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/wf4ever/wfdesc#Process\
+<http://purl.org/wf4ever/wfdesc#Process> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/wf4ever/wfprov#Artifact\
+<http://purl.org/wf4ever/wfprov#Artifact> rdf:type owl:Class .\
+\
+\
+###  http://purl.org/wf4ever/wfprov#ProcessRun\
+<http://purl.org/wf4ever/wfprov#ProcessRun> rdf:type owl:Class .\
+\
+\
+###  http://w3id.org/rv-ontology#Model\
+<http://w3id.org/rv-ontology#Model> rdf:type owl:Class ;\
+                                    rdfs:subClassOf <http://purl.org/wf4ever/ro#Resource> .\
+\
+\
+###  http://w3id.org/rv-ontology#Variable\
+<http://w3id.org/rv-ontology#Variable> rdf:type owl:Class .\
+\
+\
+###  http://www.w3.org/ns/prov#Agent\
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .\
+\
+\
+###  http://www.w3.org/ns/prov#Entity\
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .\
+\
+\
+###  https://w3id.org/survey-ontology#Answer\
+:Answer rdf:type owl:Class ;\
+        rdfs:subClassOf :SurveyElement ;\
+        owl:disjointWith :Question ,\
+                         :Talk ;\
+        rdfs:comment "An available answer for a survey question." ;\
+        rdfs:label "Answer" .\
+\
+\
+###  https://w3id.org/survey-ontology#CheckboxQuestion\
+:CheckboxQuestion rdf:type owl:Class ;\
+                  rdfs:subClassOf :ClosedQuestion ;\
+                  rdfs:comment "A question having a limited set of potential answers and allowing the participant to select more than one answer." ;\
+                  rdfs:label "Checkbox Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#ClosedAnswer\
+:ClosedAnswer rdf:type owl:Class ;\
+              rdfs:subClassOf :Answer ;\
+              rdfs:comment "An available closed answer for a survey question." ;\
+              rdfs:label "Closed Answer" .\
+\
+\
+###  https://w3id.org/survey-ontology#ClosedQuestion\
+:ClosedQuestion rdf:type owl:Class ;\
+                rdfs:subClassOf :Question ;\
+                rdfs:comment "A question in a survey with a defined set of available answers." ;\
+                rdfs:label "Closed Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#CompletedQuestion\
+:CompletedQuestion rdf:type owl:Class ;\
+                   rdfs:subClassOf <http://purl.org/linked-data/cube#Observation> ,\
+                                   <http://purl.org/wf4ever/wfdesc#Output> ,\
+                                   <http://www.w3.org/ns/prov#Entity> ;\
+                   rdfs:comment "Answer provided by a participant in completing a survey for a specific question." ;\
+                   rdfs:label "Completed Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#CompletedSurvey\
+:CompletedSurvey rdf:type owl:Class ;\
+                 rdfs:subClassOf <http://purl.org/linked-data/cube#Slice> ,\
+                                 <http://purl.org/wf4ever/wfprov#Artifact> ;\
+                 rdfs:comment "A survey completed by a participant following a survey procedure." ;\
+                 rdfs:label "Completed Survey" .\
+\
+\
+###  https://w3id.org/survey-ontology#LatentVariable\
+:LatentVariable rdf:type owl:Class ;\
+                rdfs:subClassOf <http://w3id.org/rv-ontology#Variable> ;\
+                rdfs:comment "A latent variable represents a variable that is measured indirectly through different observable variables." ;\
+                rdfs:label "Latent Variable" .\
+\
+\
+###  https://w3id.org/survey-ontology#MultipleChoiceQuestion\
+:MultipleChoiceQuestion rdf:type owl:Class ;\
+                        rdfs:subClassOf :ClosedQuestion ;\
+                        rdfs:comment "A question having a limited set of potential answers and allowing the participant to select only one answer." ;\
+                        rdfs:label "Multiple Choice Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#MultipleInputQuestion\
+:MultipleInputQuestion rdf:type owl:Class ;\
+                       rdfs:subClassOf :OpenQuestion ;\
+                       rdfs:comment "An open-ended answer allowing multiple inputs from the participant." ;\
+                       rdfs:label "Multiple Input Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#ObservableVariable\
+:ObservableVariable rdf:type owl:Class ;\
+                    rdfs:subClassOf <http://w3id.org/rv-ontology#Variable> ;\
+                    rdfs:comment "A variable that is directly measured collecting data about it." ;\
+                    rdfs:label "Observable Variable" .\
+\
+\
+###  https://w3id.org/survey-ontology#OpenAnswer\
+:OpenAnswer rdf:type owl:Class ;\
+            rdfs:subClassOf :Answer ;\
+            rdfs:comment "An open answer for a survey open-ended question." ;\
+            rdfs:label "Open Answer" .\
+\
+\
+###  https://w3id.org/survey-ontology#OpenQuestion\
+:OpenQuestion rdf:type owl:Class ;\
+              rdfs:subClassOf :Question ;\
+              rdfs:comment "An open-ended question in a survey." ;\
+              rdfs:label "Open Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#Participant\
+:Participant rdf:type owl:Class ;\
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;\
+             rdfs:comment "A participant to a survey study." ;\
+             rdfs:label "Participant" .\
+\
+\
+###  https://w3id.org/survey-ontology#Question\
+:Question rdf:type owl:Class ;\
+          rdfs:subClassOf :SurveyElement ;\
+          owl:disjointWith :Talk ;\
+          rdfs:comment "A question requiring an input from the participant in a survey." ;\
+          rdfs:label "Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#QuestionVisualization\
+:QuestionVisualization rdf:type owl:Class ;\
+                       rdfs:subClassOf owl:Thing ;\
+                       rdfs:comment "A visualisation method for a multiple choice question." ;\
+                       rdfs:label "Question Visualization" .\
+\
+\
+###  https://w3id.org/survey-ontology#SingleInputQuestion\
+:SingleInputQuestion rdf:type owl:Class ;\
+                     rdfs:subClassOf :OpenQuestion ;\
+                     rdfs:comment "An open-ended answer expecting a single input from the participant." ;\
+                     rdfs:label "Single Input Question" .\
+\
+\
+###  https://w3id.org/survey-ontology#Survey\
+:Survey rdf:type owl:Class ;\
+        rdfs:subClassOf <http://purl.org/wf4ever/ro#ResearchObject> ;\
+        rdfs:comment "A research object aggregating resources for a survey research study." ;\
+        rdfs:label "Survey" .\
+\
+\
+###  https://w3id.org/survey-ontology#SurveyCompletionTask\
+:SurveyCompletionTask rdf:type owl:Class ;\
+                      rdfs:subClassOf <http://purl.org/wf4ever/wfprov#ProcessRun> ;\
+                      rdfs:comment "Execution of a survey procedure by a participant." ;\
+                      rdfs:label "Survey Completion Task" .\
+\
+\
+###  https://w3id.org/survey-ontology#SurveyDataSet\
+:SurveyDataSet rdf:type owl:Class ;\
+               rdfs:subClassOf <http://purl.org/linked-data/cube#DataSet> ,\
+                               <http://purl.org/wf4ever/ro#Resource> ;\
+               rdfs:comment "Set of data collected for a survey considering the completions performed by participants." ;\
+               rdfs:label "Survey Dataset" .\
+\
+\
+###  https://w3id.org/survey-ontology#SurveyElement\
+:SurveyElement rdf:type owl:Class ;\
+               rdfs:subClassOf owl:Thing ;\
+               rdfs:comment "An element of a survey procedure." ;\
+               rdfs:label "Survey Element" .\
+\
+\
+###  https://w3id.org/survey-ontology#SurveyProcedure\
+:SurveyProcedure rdf:type owl:Class ;\
+                 rdfs:subClassOf <http://purl.org/wf4ever/ro#Resource> ,\
+                                 <http://purl.org/wf4ever/wfdesc#Process> ;\
+                 rdfs:comment "Procedure describing the structure of the survey as an ordered graph of connected survey elements." ;\
+                 rdfs:label "Survey Procedure" .\
+\
+\
+###  https://w3id.org/survey-ontology#SurveyTarget\
+:SurveyTarget rdf:type owl:Class ;\
+              rdfs:subClassOf owl:Thing ;\
+              rdfs:comment "Entity representing the target of a survey completion. The same survey can be completed by the same participant considering different survey targets." ;\
+              rdfs:label "Survey Target" .\
+\
+\
+###  https://w3id.org/survey-ontology#Talk\
+:Talk rdf:type owl:Class ;\
+      rdfs:subClassOf :SurveyElement ;\
+      rdfs:comment "A survey element to be provided to the participant within a survey procedure (e.g. text, link, image, etc.)." ;\
+      rdfs:label "Talk" .\
+\
+\
+#################################################################\
+#    Individuals\
+#################################################################\
+\
+###  https://w3id.org/survey-ontology#Dropdown\
+:Dropdown rdf:type owl:NamedIndividual ,\
+                   :QuestionVisualization ;\
+          rdfs:comment "Visualisation of the available textual answers of a question using a dropdown menu." ;\
+          rdfs:label "Dropdown" .\
+\
+\
+###  https://w3id.org/survey-ontology#Emoji\
+:Emoji rdf:type owl:NamedIndividual ,\
+                :QuestionVisualization ;\
+       rdfs:comment "Visualisation of the available answers of a question using a set of emojis representing their values." ;\
+       rdfs:label "Emoji" .\
+\
+\
+###  https://w3id.org/survey-ontology#Option\
+:Option rdf:type owl:NamedIndividual ,\
+                 :QuestionVisualization ;\
+        rdfs:comment "Visualisation of the available textual answers of a question listing them as different options." ;\
+        rdfs:label "Option" .\
+\
+\
+###  https://w3id.org/survey-ontology#Scale\
+:Scale rdf:type owl:NamedIndividual ,\
+                :QuestionVisualization ;\
+       rdfs:comment "Visualisation of the available answers as a scale of values (e.g. using stars)." ;\
+       rdfs:label "Scale" .\
+\
+\
+###  https://w3id.org/survey-ontology#Slider\
+:Slider rdf:type owl:NamedIndividual ,\
+                 :QuestionVisualization ;\
+        rdfs:comment "Visualisation of the available answers of a question using a slider that allows the user to select the answer between the minimum and maximum values available." ;\
+        rdfs:label "Slider" .\
+\
+\
+###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/\
+}
