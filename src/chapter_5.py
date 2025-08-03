@@ -73,7 +73,7 @@ ax.set_xlabel('Date')
 ax.set_ylabel('Monthly Sales Volume (in Thousands)')
 ax.xaxis.set_major_locator(mdates.YearLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-plt.savefig(FP_FIGURES+"chap05_bmw_i3_sales_anomalies.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap05_bmw_i3_sales_anomalies.png", dpi=DPI)
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% SECTION 5.2.1: LSTM based anomaly detection.
@@ -134,7 +134,7 @@ ax.set_xlabel('Date')
 ax.set_ylabel('Monthly Sales Volume (in Thousands)')
 ax.xaxis.set_major_locator(mdates.YearLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-plt.savefig(FP_FIGURES+"chap05_bmw_i3_sales_lstm_anomalies_events.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap05_bmw_i3_sales_lstm_anomalies_events.png", dpi=DPI)
 plt.show()
 #%%
 # Plot the LSTM loss over epochs.
@@ -207,7 +207,7 @@ ax.set_xlabel('Date')
 ax.set_ylabel('Monthly Sales Volume (in Thousands)')
 ax.xaxis.set_major_locator(mdates.YearLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-plt.savefig(FP_FIGURES+"chap05_bmw_i3_sales_gan_anomalies.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap05_bmw_i3_sales_gan_anomalies.png", dpi=DPI)
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% SECTION 5.2.2
@@ -279,7 +279,7 @@ ax.set_xlabel('Date')
 ax.set_ylabel('Monthly Sales Volume (in Thousands)')
 ax.xaxis.set_major_locator(mdates.YearLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-plt.savefig(FP_FIGURES+"chap05_bmw_i3_sales_lstm_anomalies_grid_search_tau_01.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap05_bmw_i3_sales_lstm_anomalies_grid_search_tau_01.png", dpi=DPI)
 plt.show()
 # Plot the LSTM loss over epochs.
 history = model.fit(X, Y, epochs=500, batch_size=16, verbose=1)
@@ -358,7 +358,7 @@ ax.set_xlabel('Date')
 ax.set_ylabel('Monthly Sales Volume (in Thousands)')
 ax.xaxis.set_major_locator(mdates.YearLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
-plt.savefig(FP_FIGURES+"chap05_bmw_i3_sales_lstm_anomalies_regularization.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap05_bmw_i3_sales_lstm_anomalies_regularization.png", dpi=DPI)
 plt.show()
 ### ---------------------------------------------------------------------------
 ### End.

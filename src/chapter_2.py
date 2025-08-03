@@ -44,7 +44,7 @@ bmw_color, bmw_colors = set_graph_options()
 #%% Pre-Processing
 ### ---------------------------------------------------------------------------
 # Get monthly automotive sales data
-df_monthly = pd.read_csv(FP_DATA+"data_chapter_2_monthly.csv", delimiter=",")
+df_monthly = pd.read_csv(FP_DATA+"/data_chapter_2_monthly.csv", delimiter=",")
 # Convert the Timestamp column to datetime format
 df_monthly['Timestamp'] = pd.to_datetime(df_monthly['Timestamp'], format='%d.%m.%y')
 # Set the timestamp column as the index
@@ -96,7 +96,7 @@ ax.set_ylim(bottom=0)
 ax.set_xlim(2010, 2024)
 # Set x-label
 ax.set_xlabel('Year')
-plt.savefig(FP_FIGURES+"chap2_bmw_i3_sales.png")
+plt.savefig(FP_FIGURES+"/chap2_bmw_i3_sales.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% Conduct tests for linearity and stationarity
@@ -126,7 +126,7 @@ ax.set_ylim(0, 2500)
 ax.set_ylabel('Sales Volume')
 ax.set_xlabel('Year')
 ax2.set_ylabel('Mean and Variance (in hundred thousand units)')
-plt.savefig(FP_FIGURES+"chap2_bmw_i3_sales_mean_variance_2014_2023.png")
+plt.savefig(FP_FIGURES+"/chap2_bmw_i3_sales_mean_variance_2014_2023.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 adf_result = adfuller(df_monthly_filtered)
@@ -200,7 +200,7 @@ plt.setp(axes[3, 1].xaxis.get_majorticklabels(), ha='right')
 # Reduce margins
 plt.tight_layout()
 
-plt.savefig(FP_FIGURES+"chap2_bmw_i3_sales_decomposition_comparison_2014-2016.png")
+plt.savefig(FP_FIGURES+"/chap2_bmw_i3_sales_decomposition_comparison_2014-2016.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% Showcase time series decomposition 2014 - 2019
@@ -266,7 +266,7 @@ plt.setp(axes[3, 1].xaxis.get_majorticklabels(), ha='right')
 # Reduce margins
 plt.tight_layout()
 
-plt.savefig(FP_FIGURES+"chap2_bmw_i3_sales_decomposition_comparison_2014-2019.png")
+plt.savefig(FP_FIGURES+"/chap2_bmw_i3_sales_decomposition_comparison_2014-2019.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% Showcase multivariate time series forecasting.
@@ -501,7 +501,7 @@ for i, column in enumerate(cols):
 axes[-1].set_xlabel('Year')
 # Adjust spacing between subplots
 fig.subplots_adjust(hspace=0.25)
-plt.savefig(FP_FIGURES+"chap2_bmw_3-series_sales.png")
+plt.savefig(FP_FIGURES+"/chap2_bmw_3-series_sales.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% Showcase a short term TSF.
@@ -703,7 +703,7 @@ ax.set_title(f'{column} with governmental subsidies $s$ in $EUR$ for electric ve
 ax.set_ylabel('BMW i3 sales volume in Germany')
 ax.set_xlabel('Year')
 
-plt.savefig(FP_FIGURES+"chap2_bmw_i3_sales_shaded_periods.png")
+plt.savefig(FP_FIGURES+"/chap2_bmw_i3_sales_shaded_periods.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% SECTION 2.2
@@ -864,7 +864,7 @@ ax.set_title(f'{column} with governmental subsidies $s$ in $EUR$ for electric ve
 ax.set_ylabel('BMW i3 sales volume in Germany')
 ax.set_xlabel('Year')
 
-plt.savefig(FP_FIGURES+"chap04_bmw_i3_sales_events.png")
+plt.savefig(FP_FIGURES+"/chap04_bmw_i3_sales_events.png")
 plt.show()
 
 ### ---------------------------------------------------------------------------

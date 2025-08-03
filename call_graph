@@ -1,0 +1,6 @@
+digraph {
+	rankdir=LR
+	run_script [label=run_script]
+	print [label=print]
+	run_script -> print
+}

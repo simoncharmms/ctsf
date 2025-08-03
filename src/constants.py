@@ -13,9 +13,9 @@ import os
 ### ---------------------------------------------------------------------------
 #### Filepaths.
 ### ---------------------------------------------------------------------------
-FP_PROJECT = "/Users/q666542/02_Monograph/03_Figures/dissertation_figures_repo/"
-FP_DATA = FP_PROJECT+"data/"
-FP_FIGURES = FP_PROJECT+"figures/"
+FP_PROJECT = os.path.join("/Users", "q666542", "Documents", "GitHub", "ctsf")
+FP_DATA = os.path.join(FP_PROJECT, "data")
+FP_FIGURES = os.path.join(FP_PROJECT, "figures")
 # Set working directory.
 os.chdir(FP_PROJECT)
 ### ---------------------------------------------------------------------------

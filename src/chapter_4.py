@@ -24,7 +24,7 @@ bmw_color, bmw_colors = set_graph_options()
 #%% Pre-Processing
 ### ---------------------------------------------------------------------------
 # Get monthly automotive sales data
-df_monthly = pd.read_csv(FP_DATA+"data_chapter_2_monthly.csv", delimiter=",")
+df_monthly = pd.read_csv(FP_DATA+"/data_chapter_2_monthly.csv", delimiter=",")
 # Convert the Timestamp column to datetime format
 df_monthly['Timestamp'] = pd.to_datetime(df_monthly['Timestamp'], format='%d.%m.%y')
 # Set the timestamp column as the index
@@ -98,7 +98,7 @@ ax.set_title(f'{column} with governmental subsidies $s$ in $EUR$ for electric ve
 ax.set_ylabel('BMW i3 sales volume in Germany')
 ax.set_xlabel('Year')
 
-plt.savefig(FP_FIGURES+"chap04_bmw_i3_sales_events.png")
+plt.savefig(FP_FIGURES+"/chap04_bmw_i3_sales_events.png")
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% SECTION 4.3

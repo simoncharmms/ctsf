@@ -171,7 +171,7 @@ ax.legend(loc='upper left')
 ax.set_xlabel('Date')
 ax.set_ylabel('BMW i3 Sales in Germany')
 plt.title('LSTM Prediction of BMW i3 Sales in Germany (2018-2022)')
-#plt.savefig(FP_FIGURES+"chap07_lstm_prediction_benchmark_2018_2022.png", dpi=DPI)
+#plt.savefig(FP_FIGURES+"/chap07_lstm_prediction_benchmark_2018_2022.png", dpi=DPI)
 plt.show()
 
 ### ---------------------------------------------------------------------------
@@ -233,7 +233,7 @@ for ax, col in zip(axes[1:], list_econ_cols):
 
 plt.xlabel('Date')
 plt.tight_layout(rect=[0, 0, 1, 0.97])
-plt.savefig(FP_FIGURES+"chap07_dependent_variable_and_covariates.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap07_dependent_variable_and_covariates.png", dpi=DPI)
 plt.show()
 #%## ---------------------------------------------------------------------------
 #%% SECTION 7.1
@@ -779,7 +779,7 @@ axes[1].set_ylabel('Mean Absolute Percentage Error (MAPE)')
 axes[1].set_title('MAPE by Forecast Year and Source')
 axes[1].legend()
 plt.tight_layout()
-plt.savefig(FP_FIGURES+"chap7_bmw_3-series_fc_errors.png")
+plt.savefig(FP_FIGURES+"/chap7_bmw_3-series_fc_errors.png")
 plt.show()
 
 #%%
@@ -860,7 +860,7 @@ ax.set_xlabel('Date')
 ax.set_ylabel('BMW i3 Sales in Germany')
 ax.set_title('Actual BMW i3 Sales in Germany and Human-Created Forecasts 2013 - 2023 with Events')
 plt.tight_layout()
-plt.savefig(FP_FIGURES+"chap7_bmw_3-series_fc_lstm_vs_graph_errors_forecasts.png")
+plt.savefig(FP_FIGURES+"/chap7_bmw_3-series_fc_lstm_vs_graph_errors_forecasts.png")
 plt.show()
 
 # Plot the MAPE by forecast year and source.
@@ -875,7 +875,7 @@ ax.set_ylabel('Mean Absolute Percentage Error (MAPE)')
 ax.set_title('MAPE by Forecast Year and Algorithm')
 ax.legend()
 plt.tight_layout()
-plt.savefig(FP_FIGURES+"chap7_bmw_3-series_fc_errors_lstm_vs_graph.png")
+plt.savefig(FP_FIGURES+"/chap7_bmw_3-series_fc_errors_lstm_vs_graph.png")
 plt.show()
 
 # %%

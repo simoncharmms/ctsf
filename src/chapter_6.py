@@ -120,7 +120,7 @@ ax.set_ylabel('Monthly Sales Volume (in Thousands)')
 ax.xaxis.set_major_locator(mdates.YearLocator())
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
 plt.tight_layout(rect=[0, 0, 1, 0.97])
-plt.savefig(FP_FIGURES+"chap06_clusters_and_economic_indicators_filtered.png", dpi=DPI)
+plt.savefig(FP_FIGURES+"/chap06_clusters_and_economic_indicators_filtered.png", dpi=DPI)
 plt.show()
 ### ---------------------------------------------------------------------------
 #%% SECTION 6.2.
